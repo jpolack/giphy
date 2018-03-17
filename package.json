@@ -1,0 +1,19 @@
+{
+  "name": "giphy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpolack/giphy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpolack/giphy/issues"
+  },
+  "homepage": "https://github.com/jpolack/giphy#readme"
+}
