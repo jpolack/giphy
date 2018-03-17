@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/jpolack/giphy/issues"
   },
-  "homepage": "https://github.com/jpolack/giphy#readme"
+  "homepage": "https://github.com/jpolack/giphy#readme",
+  "dependencies": {
+    "node-fetch": "^2.1.1",
+    "opn": "^5.3.0",
+    "urlencode": "^1.1.0"
+  }
 }
