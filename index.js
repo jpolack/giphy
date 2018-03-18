@@ -1,19 +1,22 @@
+#!/usr/bin/env node
 const fetch = require('node-fetch');
 const opn = require('opn');
 const urlencode = require('urlencode');
 
-const start = (input) => {
+const start = async (input) => {
     if (input.length == 0) {
         return
     }
-    load(input.join(" "))
+    await load(input.join(" "))
+
+    process.exit(0)
 }
 
 const load = async (input) => {
     const params = urlencode(input)
     let res
     try {
-        res = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=Mzdd9ePiAgntA1GPsZbQpQ8m7gmD27CY&q=${params}`).then(res => res.json())
+        res = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=Mzdd9ePiAgntA1GPsZbQpQ8m7gmD27CY&rating=g&q=${params}`).then(res => res.json())
     } catch (e) {
         console.error(e)
     }
