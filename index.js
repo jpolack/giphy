@@ -20,6 +20,10 @@ const load = async (input) => {
     } catch (e) {
         console.error(e)
     }
+    if (!(res.data && res.data.length > 0)) {
+        console.error(`No images found for ${input}`)
+        return
+    }
     const images = res.data
     const selectedImage = images[randomMax(images.length)]
     const inMp4Url = selectedImage.images.original_mp4.mp4;
